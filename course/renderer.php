@@ -1798,7 +1798,7 @@ class core_course_renderer extends plugin_renderer_base {
             $displayoptions['paginationurl'] = new moodle_url('/course/search.php', $searchcriteria);
             $displayoptions['paginationallowall'] = true; // allow adding link 'View all'
 
-            $class = 'course-search-result';
+            $class = 'row course-search-result';
             foreach ($searchcriteria as $key => $value) {
                 if (!empty($value)) {
                     $class .= ' course-search-result-'. $key;

@@ -63,7 +63,9 @@ class block_login extends block_base {
             } else {
                 $strusername = get_string('usernameemail');
             }
-
+			$this->content->text .= "\n".'<div class="container">';
+			$this->content->text .= "\n".'<div class="row">';
+			$this->content->text .= "\n".'<div class="col-5"><h2>Login</h2>';
             $this->content->text .= "\n".'<form class="loginform" id="login" method="post" action="'.get_login_url().'">';
 
             $this->content->text .= '<div class="form-group">';
@@ -114,6 +116,11 @@ class block_login extends block_base {
                 $this->content->text .= '</div>';
                 $this->content->text .= '</div>';
             }
+			$this->content->text .= '</div>';
+			$this->content->text .= "\n".'<div class="col-2"></div>';
+			$this->content->text .= "\n".'<div class="col-5"><h2>Register</h2><p>Dont have an account yet?</p><p>UNODC’s eLearning platform offers self-paced online modules that are open to individuals and free of charge. Please consult our list of public courses for details of courses currently available to members of the public. The platform also offers over 400 modules reserved for Member State institutions and International Organizations upon prior agreement with UNODC. If your institution or organization is interested in accessing this restricted content, please contact your closest UNODC office or our eLearning team based in UNODC Headquarters.</p><p><a href="https://golearn2022.org/login/signup.php" target="_blank" class="btn btn-secondary">Register new Account</a></p></div>';
+			$this->content->text .= '</div>';
+			$this->content->text .= '</div>';
         }
 
         return $this->content;

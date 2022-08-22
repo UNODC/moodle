@@ -246,6 +246,18 @@
 
     $PAGE->set_heading($course->fullname);
     echo $OUTPUT->header();
+	echo "<script>
+window.addEventListener('load', (event) => {
+	console.log('** **');
+	let image = document.getElementsByClassName('img-whp')[0];
+	let image_parent = image.parentElement;
+	let link = document.getElementsByClassName('aalink')[0].href;
+	let a = document.createElement('a');
+	a.href = link;
+	a.appendChild(image);
+	image_parent.insertBefore(a, image_parent.firstChild);
+  });
+</script>";
 
     if ($USER->editing == 1) {
 

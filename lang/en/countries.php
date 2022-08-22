@@ -271,3 +271,4 @@ $string['YT'] = 'Mayotte';
 $string['ZA'] = 'South Africa';
 $string['ZM'] = 'Zambia';
 $string['ZW'] = 'Zimbabwe';
+$string['KV'] = 'Kosovo';
