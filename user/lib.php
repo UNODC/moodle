@@ -739,7 +739,7 @@ function user_convert_text_to_menu_items($text, $page) {
         }
         if (empty($child->title)) {
             // Use it as is, don't even clean it.
-            $child->title = $bits[0];
+            $child->title = format_text($bits[0]);
             $child->titleidentifier = str_replace(" ", "-", $bits[0]);
         }
 
