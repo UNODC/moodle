@@ -55,6 +55,7 @@ if (!empty($data) || (!empty($p) && !empty($s))) {
     $confirmed = $authplugin->user_confirm($username, $usersecret);
 
     if ($confirmed == AUTH_CONFIRM_ALREADY) {
+        global $CFG;
         $user = get_complete_user_data('username', $username);
         $PAGE->navbar->add(get_string("alreadyconfirmed"));
         $PAGE->set_title(get_string("alreadyconfirmed"));
@@ -62,7 +63,8 @@ if (!empty($data) || (!empty($p) && !empty($s))) {
         echo $OUTPUT->header();
         echo $OUTPUT->box_start('generalbox centerpara boxwidthnormal boxaligncenter');
         echo "<p>".get_string("alreadyconfirmed")."</p>\n";
-        echo $OUTPUT->single_button(core_login_get_return_url(), get_string('courses'));
+        // Change
+        echo $OUTPUT->single_button($CFG->wwwroot . '/', get_string('continue'));
         echo $OUTPUT->box_end();
         echo $OUTPUT->footer();
         exit;
