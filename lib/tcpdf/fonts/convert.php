@@ -1,3 +1,3 @@
 <?php
 include('../tcpdf.php');
-$pdf = new TCPDF_FONTS('P', 'mm', 'A4', true, 'UTF-8', false); $pdf->addTTFfont('./NotoSans-Regular.ttf','TrueTypeUnicode');
+$pdf = new TCPDF_FONTS('P', 'mm', 'A4', true, 'UTF-8', false); $pdf->addTTFfont('./ArialUnicodeMS.ttf','TrueTypeUnicode');
