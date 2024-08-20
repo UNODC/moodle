@@ -93,7 +93,6 @@ if ($mform_signup->is_cancelled()) {
     exit; //never reached
 }
 
-
 $newaccount = get_string('newaccount');
 $login      = get_string('login');
 

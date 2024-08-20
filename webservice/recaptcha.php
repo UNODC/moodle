@@ -80,9 +80,31 @@ $output = <<<OET
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <style type="text/css">
+
+            /* Full page container to center content */
+            body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Flex container to center the iframe */
+            .recaptcha_element {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
     </head>
-    <body style="margin:0; padding:0">
-        $content
+    <body>
+        <div class="iframe-container">
+            $content
+        </div>
     </body>
 </html>
 OET;

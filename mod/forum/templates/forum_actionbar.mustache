@@ -49,21 +49,4 @@
     }
 }}
 
-<div class="container-fluid tertiary-navigation">
-    <div class="row">
-        <div class="navitem">
-            {{> mod_forum/quick_search_form }}
-        </div>
-        <div class="navitem">
-            {{{newdiscussionbtn}}}
-        </div>
-        <div class="ml-sm-auto navitem">
-            {{#subscribetoforum}}
-                <a class="btn btn-secondary" href="{{ subscribetoforum }}">{{#str}}subscribe, mod_forum {{/str}}</a>
-            {{/subscribetoforum}}
-            {{#unsubscribefromforum}}
-                <a class="btn btn-secondary" href="{{ unsubscribefromforum }}">{{#str}}unsubscribe, mod_forum {{/str}}</a>
-            {{/unsubscribefromforum}}
-        </div>
-    </div>
-</div>
+
