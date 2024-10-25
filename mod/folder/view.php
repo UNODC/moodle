@@ -67,6 +67,7 @@ $PAGE->set_url('/mod/folder/view.php', array('id' => $cm->id));
 
 $PAGE->set_title($course->shortname.': '.$folder->name);
 $PAGE->set_heading($course->fullname);
+
 $PAGE->set_activity_record($folder);
 
 $PAGE->add_body_class('limitedwidth');
@@ -74,6 +75,13 @@ $PAGE->add_body_class('limitedwidth');
 $output = $PAGE->get_renderer('mod_folder');
 
 echo $output->header();
+
+if (!empty($folder->intro)) {
+    echo $OUTPUT->box($description, 'generalbox mod_introbox', 'folderintro');
+} else {
+
+}
+
 
 echo $output->display_folder($folder);
 
